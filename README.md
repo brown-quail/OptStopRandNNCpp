@@ -13,11 +13,11 @@ used library:
 
 구현하기에 매우 편리할 정도로 알고리즘이 단순해서... 구현해 보았다.
 
-일단은 non-Markovian case에는 별로 관심이 없어서 RLSM, RFQI만 C++로 구현을 해 보았다.
-RFQI는 그럭저럭 결과가 잘 나오는 듯하지만 RLSM은 논문에서 말하는 정도의 결과가 나오지 않는다. 
+대략적으로 논문에서 제시한 것과 비슷한 결과가 나오는데,
+- RFQI는 정직하게 inverse matrix를 계산하여 곱해 주기 때문인지 계산 시간이 오래 걸린다. RLSM, LSM과 같이 svd를 이용한 solver 를 사용하면 개선이 될 것 같다.
+- RLSM은 C++을 사용해서인지 논문보다 계산 속도가 매우 빠르다.
+- LSM은 차원이 낮을 때는 RLSM보다도 빠르다. dimension 3이하일 때는 RLSM조차도 쓸 이유가 없어 보인다. 그러나, 결과값은 그래도 RLSM이 더 높고 (물론 RFQI가 제일 높다), 차원이 증가하면 LSM의 소요시간은 매우 빠르게 증가한다.
 
-(대신, RFQI는 논문보다 시간이 약간 더 걸리고, RLSM은 시간이 훨씬 적게 걸림.)
+LSM은 basis function을 그냥 일반 2차 다항식으로 해서인지 논문보다 결과가 항상 나쁘다. 논문에서는 Laguerre polynomial을 사용하였다. 
 
-inverse 를 구하는 행렬이 ill-posed 라서 그런 것 같아서, Eigen에서 제공하는 SVD 함수를 이용해 least square solution을 구해 보았지만, 여전히 안정적이지는 않은 모양이다.
-
-python 코드로는 이 문제를 어떻게 해결했는지 궁금하구먼...
+사용하기에 따라서는 RLSM, RFQI 모두 충분히 실제로 사용할 가치는 있어 보인다.
