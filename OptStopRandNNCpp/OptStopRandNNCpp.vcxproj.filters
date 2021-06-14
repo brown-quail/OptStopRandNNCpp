@@ -36,6 +36,9 @@
     <ClCompile Include="payoff.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="LSM.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RLSM.h">
@@ -54,6 +57,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="MonteCarloSimulation.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="LSM.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

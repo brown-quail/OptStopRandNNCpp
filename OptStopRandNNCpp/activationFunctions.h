@@ -1,5 +1,5 @@
 #pragma once
-#include <Eigen/Dense>
+#include "stdafx.h"
 
 double leakyRelu(double x);
 

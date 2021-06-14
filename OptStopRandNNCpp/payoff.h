@@ -1,5 +1,6 @@
 #pragma once
-using namespace std;
+
+#include "stdafx.h"
 
 // defines max call payoff when stopped.
 double max_call(double*** x, int simNo, int n, int assetDim, double K = 100.0);

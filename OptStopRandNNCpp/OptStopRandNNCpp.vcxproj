@@ -145,6 +145,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="activationFunctions.cpp" />
+    <ClCompile Include="LSM.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MonteCarloSimulation.cpp" />
     <ClCompile Include="payoff.cpp" />
@@ -154,11 +155,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="activationFunctions.h" />
+    <ClInclude Include="LSM.h" />
     <ClInclude Include="MonteCarloSimulation.h" />
     <ClInclude Include="payoff.h" />
     <ClInclude Include="RFQI.h" />
     <ClInclude Include="RLSM.h" />
     <ClInclude Include="RRLSM.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
