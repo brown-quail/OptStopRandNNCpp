@@ -17,7 +17,7 @@ using namespace std;
 int main(void)
 {
 	bool isRLSM = true;
-	bool isRFQI = true;
+	bool isRFQI = false;
 	bool isLSM = true;
 
 
@@ -27,14 +27,14 @@ int main(void)
 	double div = 0.0;
 	double vol = 0.2;
 	double x0 = 100;
-	int d = 10;
+	int d = 1;
 	double corr = 0;
 	double discount = r;
 
 	double strike = 100;
 
-	double T = 1;
-	int N = 100;
+	double T = 3;
+	int N = 1000;
 	int m = 20000;
 
 	int RLSM_K = 20;
